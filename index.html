@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>my page title</title>
+</head>
+<body>
+
+    <script>
+
+        function getRandomInt() {  return Math.floor(Math.random()*3);  } //returns a random integer in [0,2]
+
+        function computerPlay(){                                          //returns a string with computer selection
+
+            let choiceAI = ["Paper", "Rock", "Scissors"];
+            return choiceAI[getRandomInt()];
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            
+            moveHuman = playerSelection.toLowerCase();
+            moveAI    = computerSelection.toLowerCase();
+
+            switch (moveHuman) {
+
+                case "paper": 
+                    if (moveAI == "paper") {
+                        return "It\'s a tie! Try again";
+
+                    } else if (moveAI == "rock") {
+                        return "You won! Paper beats Rock";
+
+                    } else {
+                        return "You lost! Scissors beats Paper";
+
+                    }
+                break;
+
+                case "rock":
+                    if (moveAI == "rock") {
+                            return "It\'s a tie! Try again";
+
+                        } else if (moveAI == "scissors") {
+                            return "You won! Rock beats Scissors";
+
+                        } else {
+                            return "You lost! Paper beats Rock";
+
+                        }
+                break;
+
+                case "scissors":
+                    if (moveAI == "scissors") {
+                            return "It\'s a tie! Try again";
+
+                        } else if (moveAI == "paper") {
+                            return "You won! Scissors beats Paper";
+
+                        } else {
+                            return "You lost! Rock beats Scissors";
+
+                        }
+                break;
+            }
+
+        }
+
+        const computerSelection = computerPlay();
+        const playerSelection = "PaPer";
+
+    </script>
+
+
+
+
+</body>
+
+</html>
