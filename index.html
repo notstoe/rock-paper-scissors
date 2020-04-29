@@ -12,22 +12,19 @@
 
         function computerPlay(){                                          //returns a string with computer selection
 
-            let choiceAI = ["Paper", "Rock", "Scissors"];
+            let choiceAI = ["paper", "rock", "scissors"];
             return choiceAI[getRandomInt()];
         }
 
         function playRound(playerSelection, computerSelection) {          //plays a round of the game
-            
-            moveHuman = playerSelection.toLowerCase();                    //making sure you can enter the string uppercase, if desired
-            moveAI    = computerSelection.toLowerCase();
 
-            switch (moveHuman) {
+            switch (playerSelection) {
 
                 case "paper": 
-                    if (moveAI == "paper") {
+                    if (computerSelection === "paper") {
                         return "tie";
 
-                    } else if (moveAI == "rock") {
+                    } else if (computerSelection === "rock") {
                         return "won";
 
                     } else {
@@ -37,10 +34,10 @@
                 break;
 
                 case "rock":
-                    if (moveAI == "rock") {
+                    if (computerSelection === "rock") {
                             return "tie";
 
-                        } else if (moveAI == "scissors") {
+                        } else if (computerSelection === "scissors") {
                             return "won";
 
                         } else {
@@ -50,10 +47,10 @@
                 break;
 
                 case "scissors":
-                    if (moveAI == "scissors") {
+                    if (computerSelection === "scissors") {
                             return "tie";
 
-                        } else if (moveAI == "paper") {
+                        } else if (computerSelection === "paper") {
                             return "won";
 
                         } else {
@@ -65,14 +62,25 @@
 
         }
 
-        function game(){
+        function game(){                                                                                        //plays 5 rounds
       
-            let results = [4];                                          //array to store result of the round
-            let score = [0, 0];                                         //array to store the score, [0] = player
+            let results = [4];                                                                                  //array to store result of the round
+            let score = [0, 0];                                                                                 //array to store the score, [0] = player
 
-            console.log("Best of luck in this 5 round game! \n \n");
+            console.log(`Best of luck in this 5 rounds game!\n \n`);
 
-            for (let i = 0; i < 5; i++) {                               //loop that plays 5 rounds
+            for (let i = 0; i < 5; i++) {                                                                       
+
+                let playerSelection = "";
+                
+                    do {
+                    
+                    playerSelection = (prompt("Rock, Paper or Scissors?")).toLowerCase();                //players choice (accepts uppercase also)
+
+                    }
+                    while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors");
+
+
 
                 results[i] = playRound(playerSelection, computerPlay()); 
 
@@ -90,9 +98,10 @@
 
                     console.log(`It\'s a tie on round number ${i+1}!`);
                 }
-            }
 
-            console.log("\n");                                          //jumping a line just for readability
+        }
+
+            console.log("\n");                                                                                  //jumping a line just for readability
 
             if (score[0] > score [1]) {
 
@@ -104,8 +113,6 @@
             }
         }
 
-        const playerSelection = "rock";
-        
 
     </script>
 
