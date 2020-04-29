@@ -25,39 +25,39 @@
 
                 case "paper": 
                     if (moveAI == "paper") {
-                        return "It\'s a tie! Try again";
+                        return "tie";
 
                     } else if (moveAI == "rock") {
-                        return "You won! Paper beats Rock";
+                        return "won";
 
                     } else {
-                        return "You lost! Scissors beats Paper";
+                        return "lost";
 
                     }
                 break;
 
                 case "rock":
                     if (moveAI == "rock") {
-                            return "It\'s a tie! Try again";
+                            return "tie";
 
                         } else if (moveAI == "scissors") {
-                            return "You won! Rock beats Scissors";
+                            return "won";
 
                         } else {
-                            return "You lost! Paper beats Rock";
+                            return "lost";
 
                         }
                 break;
 
                 case "scissors":
                     if (moveAI == "scissors") {
-                            return "It\'s a tie! Try again";
+                            return "tie";
 
                         } else if (moveAI == "paper") {
-                            return "You won! Scissors beats Paper";
+                            return "won";
 
                         } else {
-                            return "You lost! Rock beats Scissors";
+                            return "lost";
 
                         }
                 break;
@@ -66,10 +66,37 @@
         }
 
         function game(){
-            //make a 5 round game
+      
+            let results = [4];                               //array to store result of the round
+            let score = [0, 0];                              //array to store the score
+
+            console.log("Best of luck in this 5 round game! \n");
+
+            for (let i = 0; i < 5; i++) {
+
+                results[i] = playRound(playerSelection, computerPlay()); 
+
+                if (results[i] === "won") {
+
+                    score[0]++;
+                    console.log(`You won round number ${i+1}! AI: ${score[1]} Player: ${score[0]}`);
+
+                } else if (results[i] === "lost") {
+
+                    score[1]++;
+                    console.log(`You lost round number ${i+1}! AI: ${score[1]} Player: ${score[0]}`);
+
+                } else {
+
+                    console.log(`It\'s a tie on round number ${i+1}!  AI: ${score[1]} Player: ${score[0]}`);
+                }
+
+            //    console.log(results[i])
+
+            }
+
         }
 
-        const computerSelection = computerPlay();
         const playerSelection = "rock";
         //console.log(playRound(playerSelection, computerSelection));
 
