@@ -67,38 +67,45 @@
 
         function game(){
       
-            let results = [4];                               //array to store result of the round
-            let score = [0, 0];                              //array to store the score
+            let results = [4];                                          //array to store result of the round
+            let score = [0, 0];                                         //array to store the score, [0] = player
 
-            console.log("Best of luck in this 5 round game! \n");
+            console.log("Best of luck in this 5 round game! \n \n");
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 5; i++) {                               //loop that plays 5 rounds
 
                 results[i] = playRound(playerSelection, computerPlay()); 
 
                 if (results[i] === "won") {
 
                     score[0]++;
-                    console.log(`You won round number ${i+1}! AI: ${score[1]} Player: ${score[0]}`);
+                    console.log(`You won round number ${i+1}!`);
 
                 } else if (results[i] === "lost") {
 
                     score[1]++;
-                    console.log(`You lost round number ${i+1}! AI: ${score[1]} Player: ${score[0]}`);
+                    console.log(`You lost round number ${i+1}!`);
 
                 } else {
 
-                    console.log(`It\'s a tie on round number ${i+1}!  AI: ${score[1]} Player: ${score[0]}`);
+                    console.log(`It\'s a tie on round number ${i+1}!`);
                 }
-
-            //    console.log(results[i])
-
             }
 
+            console.log("\n");                                          //jumping a line just for readability
+
+            if (score[0] > score [1]) {
+
+                console.log(`Congratulations! You won! \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
+
+            } else {
+
+                console.log(`The AI got you this time! You lost! \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
+            }
         }
 
         const playerSelection = "rock";
-        //console.log(playRound(playerSelection, computerSelection));
+        
 
     </script>
 
