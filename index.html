@@ -81,8 +81,8 @@
                     while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors");
 
 
-
                 results[i] = playRound(playerSelection, computerPlay()); 
+
 
                 if (results[i] === "won") {
 
@@ -99,7 +99,7 @@
                     console.log(`It\'s a tie on round number ${i+1}!`);
                 }
 
-        }
+            }
 
             console.log("\n");                                                                                  //jumping a line just for readability
 
@@ -107,9 +107,12 @@
 
                 console.log(`Congratulations! You won! \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
 
-            } else {
+            } else if (score[0] < score [1]){
 
                 console.log(`The AI got you this time! You lost! \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
+
+            } else {
+                console.log(`It\'s an official tie, ladies and gentlemen! Overtime? \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
             }
         }
 
