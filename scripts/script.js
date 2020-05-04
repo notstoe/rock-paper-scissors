@@ -89,11 +89,21 @@ function game(playerSelection){
     if (score[0] == 5 || score[1] == 5) {
         if (score[0] > score [1]) {
 
-            console.log(`Congratulations! You won! \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
+            const containerResults = document.querySelector('.containerResults');
+
+            const results = document.createElement('h1');
+            results.textContent = `Congratulations! You won! \nFinal Score -> AI: ${score[1]} Player: ${score[0]}`;
+            results.style.marginBottom = '100px';
+            containerResults.appendChild(results);
 
         } else if (score[0] < score [1]){
 
-            console.log(`The AI got you this time! You lost! Rematch? \nFinal Score: AI: ${score[1]} Player: ${score[0]}`);
+            const containerResults = document.querySelector('.containerResults');
+            
+            const results = document.createElement('h1');
+            results.textContent = `The AI got you this time! You lost! Rematch? \nFinal Score -> AI: ${score[1]} Player: ${score[0]}`;
+            results.style.marginBottom = '100px';
+            containerResults.appendChild(results);
         }
 
         score = [0, 0];
