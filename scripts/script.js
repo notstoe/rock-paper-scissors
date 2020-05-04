@@ -80,6 +80,11 @@ function game(playerSelection){
             console.log(`It\'s a tie on this round!`);
         }
 
+    const scorePlayer = document.querySelector('#scorePlayer');
+    scorePlayer.textContent = `${score[0]}`;
+
+    const scoreAI = document.querySelector('#scoreAI');
+    scoreAI.textContent = `${score[1]}`;
 
     if (score[0] == 5 || score[1] == 5) {
         if (score[0] > score [1]) {
@@ -102,7 +107,7 @@ buttons.forEach((button) => {button.addEventListener('click', getInnerText); });
 
 
 function getInnerText(e) {
-    let pressedbutton = e.target.innerText;
-    game(pressedbutton.toLowerCase());
+     
+   game(e.target.alt);
 }
 

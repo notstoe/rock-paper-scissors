@@ -1,0 +1,76 @@
+body {
+    background-color: #593330;
+}
+
+.hideButton {
+    border: 0px;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 180px auto;
+    
+}
+
+.img {
+    width: 150px;
+    padding: 0px;
+    margin-bottom: -5px;
+    margin-top: -1px;
+    border-radius: 10px;
+}
+
+.img:hover {
+    border: 1px dashed #c2aad8;
+    box-shadow: 2px 3px #9f88b4;
+    
+}
+
+.containerButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: -40px;
+    justify-content: center;
+
+}
+
+.containerScore {
+    
+    display: grid;
+    grid-template-columns: 135px 135px;
+    grid-template-rows: 25px 30px;
+    color: #f8f4f8;
+    border: 2px solid #ffc4b1;
+    border-radius: 8px;
+    height: 50px;
+    width: 270px;
+    margin: 10px auto;
+    margin-bottom: -130px;
+    margin-top: 50px;
+    
+}
+
+.containerHeader{
+    color: #f8f4f8;
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    padding-top: 13px;
+    text-align: center;
+}
+
+#scoreValuePlayer, #scoreValueAI, #scorePlayer, #scoreAI  {
+    justify-self: center;
+    padding-top: 4px;
+    padding-left: 17px;
+
+}
+
+.containerResults{
+    color: #f8f4f8;
+}
