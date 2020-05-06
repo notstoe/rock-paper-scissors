@@ -1,5 +1,5 @@
 body {
-    background-color: #593330;
+    background-color: #162b29;
 }
 
 .hideButton {
@@ -16,11 +16,23 @@ body {
     margin-bottom: -5px;
     margin-top: -1px;
     border-radius: 10px;
+    border-style: outset;
+    border-color: #fbda57;
+    border-width: 4px;
 }
 
 .img:hover {
-    border: 1px dashed #c2aad8;
-    box-shadow: 2px 3px #9f88b4;
+    
+    transform: scale(1.04);
+    transition-duration: 0.07s;
+    
+}
+
+.img:active {
+    
+    border-color: #fbda57;
+    border-style: inset;
+    transform: scale(1.02);
     
 }
 
