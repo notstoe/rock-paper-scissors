@@ -108,7 +108,7 @@ function game(playerSelection){
 
     const scorePlayer = document.querySelector('#scorePlayer');
     scorePlayer.textContent = `${score[0]}`;
-
+    
     const scoreAI = document.querySelector('#scoreAI');
     scoreAI.textContent = `${score[1]}`;
 
