@@ -1,0 +1,86 @@
+@media (max-width: 500px) {
+  
+  .headerLinks {
+    margin-top: 3vw;
+  }
+  
+  header #github {
+   width: 8vw;
+   height: 8vw;
+   margin-top: 0px;
+  }
+  
+  header .helpHeader {
+    width: 8vw;
+    height: 8vw;
+  }
+  
+  body .containerHeader {
+    margin-top: 16vw;
+  }
+  
+  h1 {
+    font-size: 5vw;
+  }
+  
+  p {
+    font-size: 3.5vw;
+    margin-top: 1vw;
+  }
+  
+  .containerScore {
+    margin-top: 7vw;
+  }
+  .containerButtons {
+    margin-top: 0vw;
+    margin-bottom: -27vw;
+  }
+  
+  .containerButtons img {
+    width: 25vw;
+  }
+  
+  .containerScore #scoreAI, #scorePlayer {
+    font-size: 6vw;
+    margin-top: -1vw;
+  }
+  
+  .containerScore #scoreValueAI, #scoreValuePlayer {
+    font-size: 4vw;
+    margin-top: 0vw;
+  }
+  
+  .containerScore {
+    padding: 1.5vw 5vw;
+  }
+  
+}
+
+@media screen and (max-width: 700px) and (min-width: 470px) {
+  
+  .containerScore #scoreValueAI, #scoreValuePlayer {
+    margin-top: -1vw;
+    font-size: 3vw;
+  }
+  
+  .containerScore #scoreAI, #scorePlayer {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+  
+  .containerScore {
+    padding: 2vw 3vw;
+  }
+  
+  .containerButtons img {
+    width: 23vw;
+  }
+}
+
+@media (max-width: 310px) {
+  
+  .containerScore {
+    padding: 0.5vw 0.5vw;
+  }
+  
+}
