@@ -1,7 +1,7 @@
 # rock-paper-scissors
 [Odin] Javascript learning: Implementation of the classic game Rock, Papers, Scissors on the browser, using JS
 
-> See it live on [notstoe.github.io/rock-paper-scissors](https://notostoe.github.io/rock-paper-scissors/)
+> See it live on [notstoe.github.io/rock-paper-scissors](https://notstoe.github.io/rock-paper-scissors/)
 
 # objectives
 The main objectives of this project are to:
